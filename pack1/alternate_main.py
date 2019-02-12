@@ -1,4 +1,5 @@
 import pack1.mod2
 
-pack1.mod2.mod2_func()
-print('alternate_main')
+if __name__ == '__main__':
+    pack1.mod2.mod2_func()
+    print('alternate_main')
