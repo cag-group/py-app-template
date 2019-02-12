@@ -7,16 +7,9 @@ pip install --upgrade pip
 pip3 install -r requirements.txt
 ```
 
-Original install:
-```
-pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
-pip3 install matplotlib
-pip3 install keras
-```
-
 ## Add package
 
-Lookup the package version you want to install on the package home page, or run
+Lookup the package version to install from the package home page, or run
 
 ```
 pip3 install <packagename>
@@ -24,7 +17,7 @@ pip3 install <packagename>
 
 and note the version of the installed package. Add it to `requirements.txt`
 
-Do not use `pip3 freeze` because it will also list dependent packages and thus hiding which are our direct dependencies.
+Do not use `pip3 freeze` because it will also list dependent packages and thus hiding which of these are our direct dependencies.
 
 ## Upgrade package
 
@@ -50,9 +43,9 @@ then follow procedure "Initial setup".
 ## Run in docker
 
 ```
-docker build -t python-service .
-docker rm -f python-service
-docker run --name python-service -p 8080:8080 python-service
+docker build -t python-app .
+docker rm -f python-app
+docker run --name python-app python-app
 ```
 
 ## Run/debug in Intellij
